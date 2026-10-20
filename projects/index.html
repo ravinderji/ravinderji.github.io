@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Ravinderjeet</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/projects.css" />
+</head>
+<body>
+  <header>
+    <h1>Projects</h1>
+    <p>Apps and tools by Ravinderjeet</p>
+    <nav><a href="../index.html">Home</a><a href="./">Projects</a></nav>
+  </header>
+  <main>
+    <section id="project-list">
+      <p class="meta">Loading projects…</p>
+    </section>
+    <noscript><p>See <a href="meditation-tracker/">MEDITATION Tracker: Japa Mala</a>.</p></noscript>
+    <script>
+      // Cards come from projects.json: add a project there, no HTML to edit.
+      const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+      const ext = u => /^https?:/.test(u) ? ' target="_blank" rel="noopener"' : '';
+      fetch('projects.json').then(r => r.json()).then(list => {
+        document.getElementById('project-list').innerHTML = list.map(p => `
+          <div class="card">
+            ${p.icon ? `<img src="${esc(p.icon)}" alt="" />` : ''}
+            <div>
+              <h3><a href="${esc(p.page)}"${ext(p.page)}>${esc(p.name)}</a></h3>
+              <p>${esc(p.platform)} · ${esc(p.summary)}</p>
+              ${Object.keys(p.links || {}).length ? `<p>${Object.entries(p.links).map(([k, u]) =>
+                `<a href="${esc(u)}"${ext(u)}>${esc(k)}</a>`).join(' · ')}</p>` : ''}
+            </div>
+          </div>`).join('');
+      }).catch(() => {
+        document.getElementById('project-list').innerHTML = '<p>Could not load the project list.</p>';
+      });
+    </script>
+  </main>
+  <footer><p>© 2025–2026 Ravinderjeet Singh Nagpal. All rights reserved.</p></footer>
+</body>
+</html>

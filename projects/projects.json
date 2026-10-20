@@ -1,0 +1,21 @@
+[
+  {
+    "name": "MEDITATION Tracker: Japa Mala",
+    "platform": "Android",
+    "summary": "An offline japa counter with a digital mala, mantra library, sankalpa, reminders and Panchang.",
+    "page": "meditation-tracker/",
+    "icon": "meditation-tracker/images/icon.png",
+    "links": {
+      "Google Play": "https://play.google.com/store/apps/details?id=codetumblr.net.meditationcounter",
+      "Privacy": "meditation-tracker/privacy.html",
+      "Terms": "meditation-tracker/terms.html"
+    }
+  },
+  {
+    "name": "AI Workflow Orchestrator",
+    "platform": "Library",
+    "summary": "A lightweight plugin framework for orchestrating complex AI workflows: documentation and examples.",
+    "page": "https://github.com/ravinderji/ai-workflow-orchestrator-docs",
+    "links": {}
+  }
+]
