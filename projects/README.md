@@ -6,6 +6,7 @@ Each project has its own folder here, published at `https://ravinderji.github.io
 projects/
   projects.json          list shown on the Projects page (projects/index.html)
   _template/             starting point for a new project (not published: "_" folders are skipped)
+  voice-legacy/          same layout as meditation-tracker/
   meditation-tracker/
     index.html           app page
     privacy.html         privacy policy (link this in the store listing)

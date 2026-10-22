@@ -1,5 +1,16 @@
 [
   {
+    "name": "Voice Legacy: Stories & Voices",
+    "platform": "Android",
+    "summary": "Stories, books and letters read aloud in natural Hindi and English voices, or in a voice like a loved one's. Offline and private. Coming soon on Google Play.",
+    "page": "voice-legacy/",
+    "icon": "voice-legacy/images/icon.png",
+    "links": {
+      "Privacy": "voice-legacy/privacy.html",
+      "Terms": "voice-legacy/terms.html"
+    }
+  },
+  {
     "name": "MEDITATION Tracker: Japa Mala",
     "platform": "Android",
     "summary": "An offline japa counter with a digital mala, mantra library, sankalpa, reminders and Panchang.",
