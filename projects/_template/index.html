@@ -3,42 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>APP_NAME | Ravinderjeet</title>
-  <link rel="stylesheet" href="../../assets/css/style.css" />
-  <link rel="stylesheet" href="../../assets/css/projects.css" />
+  <title>APP_NAME | codetumblr</title>
+  <meta name="description" content="SHORT_DESCRIPTION" />
+  <link rel="canonical" href="https://codetumblr.net/projects/_template/" />
+  <meta property="og:title" content="APP_NAME | codetumblr" />
+  <meta property="og:description" content="SHORT_DESCRIPTION" />
+  <meta property="og:url" content="https://codetumblr.net/projects/_template/" />
+  <meta name="theme-color" content="#221a33" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600&family=Tiro+Devanagari+Hindi&display=swap" />
+  <link rel="stylesheet" href="../../assets/css/site.css" />
 </head>
-<body>
-  <header>
-    <h1>APP_NAME</h1>
-    <p>APP_NAME</p>
-    <nav><a href="../../index.html">Home</a><a href="../">Projects</a><a href="./">APP_NAME</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+<!-- Replace every ALL_CAPS placeholder. Put icon.png and screenshots in images/. For the app's own colours add a .app-FOLDER rule in assets/css/site.css and set it as the body class. -->
+<body class="">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="bar">
+    <div class="wrap">
+      <a class="brand" href="../../index.html">code<span>tumblr</span></a>
+      <nav aria-label="Site"><a href="../../index.html">Home</a><a href="../../projects/" aria-current="page">Apps</a><a href="../../index.html#about">About</a><a href="https://github.com/ravinderji" rel="noopener">GitHub</a></nav>
+    </div>
   </header>
-  <main>
-    <!-- Replace every ALL_CAPS placeholder. Put the icon and screenshots in images/. -->
-    <section class="app-head">
-      <img src="images/icon.png" alt="APP_NAME icon" />
-      <div>
-        <h2 style="margin-top:0">ONE_LINE_PITCH</h2>
-        <p>SHORT_DESCRIPTION</p>
-        <p><a class="button" href="STORE_URL" target="_blank" rel="noopener">Get it on STORE_NAME</a></p>
+
+  <main id="main">
+    <section class="app-hero">
+      <div class="wrap">
+        <div>
+          <a class="crumb" href="../">All apps</a>
+          <img class="icon" src="images/icon.png" alt="APP_NAME icon" />
+          <h1>APP_NAME</h1>
+          <p class="hindi" lang="hi">HINDI_TAGLINE (or remove this line)</p>
+          <p class="pitch">ONE_LINE_PITCH</p>
+          <div class="actions"><a class="btn btn-solid" href="STORE_URL" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.6v18.8c0 .5.5.8.9.6l10.6-10.1L4.9 2c-.4-.2-.9.1-.9.6zm12.9 7.1L6.4 1.3l10.9 6.3-.4 2.1zm0 4.6.4 2.1-10.9 6.3 10.5-8.4zm1.6-5.3 2.8 1.6c.9.5.9 1.3 0 1.8l-2.8 1.6-2-2.5 2-2.5z"/></svg>Get it on Google Play</a></div>
+        </div>
+        <img class="lead-shot" src="images/01.png" alt="SCREEN_DESCRIPTION" />
       </div>
     </section>
-    <section>
-      <h2>📸 Screenshots</h2>
-      <div class="shots"><img src="images/01.png" alt="SCREEN_DESCRIPTION" loading="lazy" /></div>
+
+    <section class="shots-wrap" aria-label="Screenshots">
+      <div class="shots"><img src="images/02.png" alt="SCREEN_DESCRIPTION" loading="lazy" /></div>
     </section>
-    <section>
-      <h2>✨ Features</h2>
-      <ul>
-        <li>FEATURE</li>
-      </ul>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head"><h2>What it does</h2></div>
+        <ul class="features">
+          <li><span class="e" aria-hidden="true">✨</span><div><b>FEATURE</b><span>FEATURE_DETAIL</span></div></li>
+        </ul>
+      </div>
     </section>
-    <section>
-      <h2>🔒 Privacy</h2>
-      <p>PRIVACY_SUMMARY Read the full <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>.</p>
-      <p>Contact: <a href="mailto:support@codetumblr.net">support@codetumblr.net</a></p>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="promise">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.4" fill="currentColor"/></svg>
+          <div>
+            <h2>Your privacy</h2>
+            <p>PRIVACY_SUMMARY</p>
+            <p class="links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="privacy.html#hi" lang="hi">हिन्दी में पढ़ें</a><a href="mailto:support@codetumblr.net">support@codetumblr.net</a></p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-  <footer><p>© YEAR Ravinderjeet Singh Nagpal. All rights reserved.</p></footer>
+  <footer class="foot">
+    <div class="wrap">
+      <p>© 2025–2026 Ravinderjeet Singh Nagpal</p>
+      <nav aria-label="Elsewhere"><a href="../../projects/">Apps</a><a href="mailto:support@codetumblr.net">support@codetumblr.net</a><a href="https://github.com/ravinderji" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/ravinderjeet/" rel="noopener">LinkedIn</a></nav>
+    </div>
+  </footer>
 </body>
 </html>

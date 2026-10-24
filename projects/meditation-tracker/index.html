@@ -3,52 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meditation Tracker: Japa Mala | Ravinderjeet</title>
-  <link rel="stylesheet" href="../../assets/css/style.css" />
-  <link rel="stylesheet" href="../../assets/css/projects.css" />
+  <title>Meditation Tracker: Japa Mala | codetumblr</title>
+  <meta name="description" content="Meditation Tracker is an offline japa counter for Android: chant aloud and a digital mala counts every repetition." />
+  <link rel="canonical" href="https://codetumblr.net/projects/meditation-tracker/" />
+  <meta property="og:title" content="Meditation Tracker: Japa Mala | codetumblr" />
+  <meta property="og:description" content="Meditation Tracker is an offline japa counter for Android: chant aloud and a digital mala counts every repetition." />
+  <meta property="og:url" content="https://codetumblr.net/projects/meditation-tracker/" />
+  <meta name="theme-color" content="#221a33" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600&family=Tiro+Devanagari+Hindi&display=swap" />
+  <link rel="stylesheet" href="../../assets/css/site.css" />
 </head>
-<body>
-  <header>
-    <h1>Meditation Tracker: Japa Mala</h1>
-    <p>Japa counter · मंत्र जप काउंटर</p>
-    <nav><a href="../../index.html">Home</a><a href="../">Projects</a><a href="./">Meditation Tracker</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+<body class="app-meditation-tracker">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="bar">
+    <div class="wrap">
+      <a class="brand" href="../../index.html">code<span>tumblr</span></a>
+      <nav aria-label="Site"><a href="../../index.html">Home</a><a href="../../projects/" aria-current="page">Apps</a><a href="../../index.html#about">About</a><a href="https://github.com/ravinderji" rel="noopener">GitHub</a></nav>
+    </div>
   </header>
-  <main>
-    <section class="app-head">
-      <img src="images/icon.png" alt="Meditation Tracker icon" />
-      <div>
-        <h2 style="margin-top:0">Chant aloud. Every jaap is counted.</h2>
-        <p>An offline japa counter with a digital mala: it listens while you chant and moves one bead for every repetition. Hands free, eyes closed if you like.</p>
-        <p><a class="button" href="https://play.google.com/store/apps/details?id=codetumblr.net.meditationcounter" target="_blank" rel="noopener">Get it on Google Play</a></p>
+
+  <main id="main">
+    <section class="app-hero">
+      <div class="wrap">
+        <div>
+          <a class="crumb" href="../">All apps</a>
+          <img class="icon" src="images/icon.png" alt="Meditation Tracker icon" />
+          <h1>Meditation Tracker: Japa Mala</h1>
+          <p class="hindi" lang="hi">मंत्र जप काउंटर</p>
+          <p class="pitch">Chant aloud and every jaap is counted. A digital mala that listens while you chant and moves one bead for every repetition. Hands free, eyes closed if you like.</p>
+          <div class="actions"><a class="btn btn-solid" href="https://play.google.com/store/apps/details?id=codetumblr.net.meditationcounter" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.6v18.8c0 .5.5.8.9.6l10.6-10.1L4.9 2c-.4-.2-.9.1-.9.6zm12.9 7.1L6.4 1.3l10.9 6.3-.4 2.1zm0 4.6.4 2.1-10.9 6.3 10.5-8.4zm1.6-5.3 2.8 1.6c.9.5.9 1.3 0 1.8l-2.8 1.6-2-2.5 2-2.5z"/></svg>Get it on Google Play</a></div>
+        </div>
+        <img class="lead-shot" src="images/01_chant.png" alt="Chanting screen with the mala" />
       </div>
     </section>
 
-    <section>
-      <h2>📸 Screenshots</h2>
-      <div class="shots"><img src="images/01_chant.png" alt="Chanting screen with the mala" loading="lazy" /><img src="images/02_library.png" alt="Mantra library" loading="lazy" /><img src="images/03_meaning.png" alt="Mantra meaning" loading="lazy" /><img src="images/04_sankalpa.png" alt="Sankalpa progress" loading="lazy" /><img src="images/05_reminders.png" alt="Chant reminders" loading="lazy" /><img src="images/06_panchang.png" alt="Panchang" loading="lazy" /></div>
+    <section class="shots-wrap" aria-label="Screenshots">
+      <div class="shots"><img src="images/02_library.png" alt="Mantra library" loading="lazy" /><img src="images/03_meaning.png" alt="Mantra meaning" loading="lazy" /><img src="images/04_sankalpa.png" alt="Sankalpa progress" loading="lazy" /><img src="images/05_reminders.png" alt="Chant reminders" loading="lazy" /><img src="images/06_panchang.png" alt="Panchang" loading="lazy" /></div>
     </section>
 
-    <section>
-      <h2>✨ Features</h2>
-      <ul>
-        <li>🎙️ <strong>Counts by listening</strong>: offline speech recognition on your phone, even with the screen off.</li>
-        <li>📿 <strong>Over 180 traditional mantras</strong>, with purpose and meaning in English and Hindi, in Devanagari or Roman letters.</li>
-        <li>🎯 <strong>Targets and malas</strong>: 27, 54, 108 or your own number; Rudraksha, Tulsi, Sandalwood, Sphatik or Haldi mala.</li>
-        <li>🙏 <strong>Sankalpa (anushthan)</strong>: e.g. 11 malas a day for 40 days, tracked day by day.</li>
-        <li>⏰ <strong>Chant reminders</strong>: daily times or a wake-up alarm, with a streak of days in a row.</li>
-        <li>🌙 <strong>Panchang</strong>: today's tithi, sunrise and sunset, Ekadashi and festivals ahead, each with a mantra.</li>
-        <li>🌐 English and Hindi, light and dark themes. No account, no ads, no tracking.</li>
-      </ul>
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head"><h2>What it does</h2></div>
+        <ul class="features">
+          <li><span class="e" aria-hidden="true">🎙️</span><div><b>Counts by listening</b><span>Offline speech recognition on your phone, even with the screen off.</span></div></li>
+          <li><span class="e" aria-hidden="true">📿</span><div><b>Over 180 traditional mantras</b><span>With purpose and meaning in English and Hindi, in Devanagari or Roman letters.</span></div></li>
+          <li><span class="e" aria-hidden="true">🎯</span><div><b>Targets and malas</b><span>27, 54, 108 or your own number; Rudraksha, Tulsi, Sandalwood, Sphatik or Haldi mala.</span></div></li>
+          <li><span class="e" aria-hidden="true">🙏</span><div><b>Sankalpa (anushthan)</b><span>For example 11 malas a day for 40 days, tracked day by day.</span></div></li>
+          <li><span class="e" aria-hidden="true">⏰</span><div><b>Chant reminders</b><span>Daily times or a wake-up alarm, with a streak of days in a row.</span></div></li>
+          <li><span class="e" aria-hidden="true">🌙</span><div><b>Panchang</b><span>Today's tithi, sunrise and sunset, Ekadashi and festivals ahead, each with a mantra.</span></div></li>
+          <li><span class="e" aria-hidden="true">🌐</span><div><b>English and Hindi</b><span>Light and dark themes. No account, no ads, no tracking.</span></div></li>
+        </ul>
+      </div>
     </section>
 
-    <section>
-      <h2>🔒 Privacy</h2>
-      <p>Your chanting is counted on your phone and never sent anywhere; your mantras and counts stay on your phone.
-      Read the full <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Use</a>
-      (also in <a href="privacy.html#hi">हिन्दी</a>).</p>
-      <p>Contact: <a href="mailto:support@codetumblr.net">support@codetumblr.net</a></p>
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="promise">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.4" fill="currentColor"/></svg>
+          <div>
+            <h2>Your privacy</h2>
+            <p>Your chanting is counted on your phone and never sent anywhere. Your mantras and counts stay on your phone.</p>
+            <p class="links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="privacy.html#hi" lang="hi">हिन्दी में पढ़ें</a><a href="mailto:support@codetumblr.net">support@codetumblr.net</a></p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-  <footer><p>© 2025–2026 Ravinderjeet Singh Nagpal. All rights reserved.</p></footer>
+  <footer class="foot">
+    <div class="wrap">
+      <p>© 2025–2026 Ravinderjeet Singh Nagpal</p>
+      <nav aria-label="Elsewhere"><a href="../../projects/">Apps</a><a href="mailto:support@codetumblr.net">support@codetumblr.net</a><a href="https://github.com/ravinderji" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/ravinderjeet/" rel="noopener">LinkedIn</a></nav>
+    </div>
+  </footer>
 </body>
 </html>

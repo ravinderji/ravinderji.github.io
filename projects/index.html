@@ -3,41 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Ravinderjeet</title>
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/projects.css" />
+  <title>Apps | codetumblr</title>
+  <meta name="description" content="Android apps by Ravinderjeet Singh Nagpal: Voice Legacy and Meditation Tracker." />
+  <link rel="canonical" href="https://codetumblr.net/projects/" />
+  <meta property="og:title" content="Apps | codetumblr" />
+  <meta property="og:description" content="Android apps by Ravinderjeet Singh Nagpal: Voice Legacy and Meditation Tracker." />
+  <meta property="og:url" content="https://codetumblr.net/projects/" />
+  <meta name="theme-color" content="#221a33" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600&family=Tiro+Devanagari+Hindi&display=swap" />
+  <link rel="stylesheet" href="../assets/css/site.css" />
 </head>
 <body>
-  <header>
-    <h1>Projects</h1>
-    <p>Apps and tools by Ravinderjeet</p>
-    <nav><a href="../index.html">Home</a><a href="./">Projects</a></nav>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="bar">
+    <div class="wrap">
+      <a class="brand" href="../index.html">code<span>tumblr</span></a>
+      <nav aria-label="Site"><a href="../index.html">Home</a><a href="../projects/" aria-current="page">Apps</a><a href="../index.html#about">About</a><a href="https://github.com/ravinderji" rel="noopener">GitHub</a></nav>
+    </div>
   </header>
-  <main>
-    <section id="project-list">
-      <p class="meta">Loading projects…</p>
-    </section>
-    <noscript><p>See <a href="voice-legacy/">Voice Legacy: Stories &amp; Voices</a> and <a href="meditation-tracker/">Meditation Tracker: Japa Mala</a>.</p></noscript>
+
+  <main id="main">
+    <header class="page-head">
+      <div class="wrap">
+        <h1>Apps and projects</h1>
+        <p>Everything I've built outside work, with links to each app's privacy policy and terms.</p>
+      </div>
+    </header>
+    <div class="wrap section" style="padding-top:24px">
+      <ul class="plist" id="project-list"></ul>
+      <noscript><p>See <a href="voice-legacy/">Voice Legacy: Stories &amp; Voices</a> and <a href="meditation-tracker/">Meditation Tracker: Japa Mala</a>.</p></noscript>
+    </div>
     <script>
-      // Cards come from projects.json: add a project there, no HTML to edit.
+      // The list comes from projects.json: add a project there, no HTML to edit.
       const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-      const ext = u => /^https?:/.test(u) ? ' target="_blank" rel="noopener"' : '';
+      const ext = u => /^https?:/.test(u) ? ' rel="noopener"' : '';
       fetch('projects.json').then(r => r.json()).then(list => {
         document.getElementById('project-list').innerHTML = list.map(p => `
-          <div class="card">
-            ${p.icon ? `<img src="${esc(p.icon)}" alt="" />` : ''}
+          <li>
+            ${p.icon ? `<img src="${esc(p.icon)}" alt="" />` : `<span class="ph" aria-hidden="true">${esc(p.name[0])}</span>`}
             <div>
-              <h3><a href="${esc(p.page)}"${ext(p.page)}>${esc(p.name)}</a></h3>
-              <p>${esc(p.platform)} · ${esc(p.summary)}</p>
-              ${Object.keys(p.links || {}).length ? `<p>${Object.entries(p.links).map(([k, u]) =>
-                `<a href="${esc(u)}"${ext(u)}>${esc(k)}</a>`).join(' · ')}</p>` : ''}
+              <h2><a href="${esc(p.page)}"${ext(p.page)}>${esc(p.name)}</a></h2>
+              <p class="kind">${esc(p.platform)}</p>
+              <p>${esc(p.summary)}</p>
+              ${Object.keys(p.links || {}).length ? `<p class="links">${Object.entries(p.links).map(([k, u]) =>
+                `<a href="${esc(u)}"${ext(u)}>${esc(k)}</a>`).join('')}</p>` : ''}
             </div>
-          </div>`).join('');
+          </li>`).join('');
       }).catch(() => {
-        document.getElementById('project-list').innerHTML = '<p>Could not load the project list.</p>';
+        document.getElementById('project-list').innerHTML = '<li><p>The project list didn\'t load. Open <a href="voice-legacy/">Voice Legacy</a> or <a href="meditation-tracker/">Meditation Tracker</a> directly.</p></li>';
       });
     </script>
   </main>
-  <footer><p>© 2025–2026 Ravinderjeet Singh Nagpal. All rights reserved.</p></footer>
+  <footer class="foot">
+    <div class="wrap">
+      <p>© 2025–2026 Ravinderjeet Singh Nagpal</p>
+      <nav aria-label="Elsewhere"><a href="../projects/">Apps</a><a href="mailto:support@codetumblr.net">support@codetumblr.net</a><a href="https://github.com/ravinderji" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/ravinderjeet/" rel="noopener">LinkedIn</a></nav>
+    </div>
+  </footer>
 </body>
 </html>
